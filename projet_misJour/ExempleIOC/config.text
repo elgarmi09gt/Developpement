@@ -1,0 +1,3 @@
+sn.ucad.master2.dao.impl.DaoImpl
+sn.ucad.master2.metier.imp.MetierImpl
+--sn.ucad.master2.dao.impl.extension.DaoImplExtension

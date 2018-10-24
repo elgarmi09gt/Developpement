@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" 
+	href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" 
+	href="css/styles.css"/>
+<title>Catalogue Produit</title>
+</head>
+<body ng-app="MyApp" ng-controller="MyController">
+<div class = "container spacer">
+	Rechercher : <input type="text" ng-model="txtDesignation"/>
+    <button ng-click="rechercherProduits()">CHARGER</button> 
+</div >	
+<div class = "container spacer">
+<table class="table table-striped">
+     <thead>
+          <tr>
+              <th>REFERENCE</th>
+              <th>DESIGNATION</th>
+              <th>PRIX</th>
+              <th>QUANTITE</th>
+              <th colspan=2>Action</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr ng-repeat="p in listeProduit">
+              <td>{{p.reference}}</td>
+              <td>{{p.designation}}</td>
+              <td>{{p.prix}}</td>
+              <td>{{p.quantite}}</td>
+          </tr>
+      </tbody>
+</table>
+</div>
+<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
